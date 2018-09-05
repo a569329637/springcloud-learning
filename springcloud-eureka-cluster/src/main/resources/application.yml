@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-cloud-eureka-cluster
+
+server:
+  port: 1111
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
