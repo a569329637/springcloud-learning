@@ -23,7 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring-cloud.version>Dalston.RELEASE</spring-cloud.version>
+        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -66,5 +66,7 @@
         <module>springcloud-hystrix-turbine-node</module>
         <module>springcloud-config-server</module>
         <module>springcloud-config-client</module>
+        <module>springcloud-config-server-bus</module>
+        <module>springcloud-config-client-bus</module>
     </modules>
 </project>
