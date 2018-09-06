@@ -64,5 +64,7 @@
         <module>springcloud-eureka-consumer-hystrix-dashboard</module>
         <module>springcloud-hystrix-turbine</module>
         <module>springcloud-hystrix-turbine-node</module>
+        <module>springcloud-config-server</module>
+        <module>springcloud-config-client</module>
     </modules>
 </project>
