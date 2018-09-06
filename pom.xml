@@ -60,5 +60,6 @@
         <module>springcloud-eureka-cluster</module>
         <module>springcloud-eureka-producer</module>
         <module>springcloud-eureka-consumer</module>
+        <module>springcloud-eureka-consumer-hystrix</module>
     </modules>
 </project>
