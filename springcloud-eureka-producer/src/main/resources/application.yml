@@ -1,6 +1,13 @@
 spring:
   application:
     name: spring-cloud-eureka-producer
+#   配合zipkin-server进行采样
+#   采样比例，设置的值介于0.0到1.0之间，1.0则表示全部采集
+  zipkin:
+    base-url: http://localhost:4445
+  sleuth:
+    sampler:
+      percentage: 1.0
 
 server:
   port: 2222

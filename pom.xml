@@ -69,5 +69,6 @@
         <module>springcloud-config-server-bus</module>
         <module>springcloud-config-client-bus</module>
         <module>springcloud-zuul</module>
+        <module>springcloud-zipkin-server</module>
     </modules>
 </project>
