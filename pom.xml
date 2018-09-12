@@ -70,5 +70,6 @@
         <module>springcloud-config-client-bus</module>
         <module>springcloud-zuul</module>
         <module>springcloud-zipkin-server</module>
+        <module>springcloud-eureka-ribbon</module>
     </modules>
 </project>
