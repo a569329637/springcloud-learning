@@ -8,39 +8,30 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>springcloud-learning</name>
+    <name>SpringCloud-learning</name>
     <description>Spring Cloud Learning</description>
 
+    <!-- 引入spring boot的依赖 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.3.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.0.7.RELEASE</version>
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
-        <mybatis.version>1.1.1</mybatis.version>
+        <java.version>1.8</java.version>
     </properties>
 
+    <!-- 引入spring cloud的依赖，不能少，主要用来管理Spring Cloud生态各组件的版本 -->
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>Finchley.SR2</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -48,8 +39,22 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- 引入H2数据库，一种内嵌的数据库，语法类似MySQL -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+        <!-- 引入Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
@@ -63,21 +68,6 @@
     </build>
 
     <modules>
-        <module>springcloud-eureka</module>
-        <module>springcloud-eureka-cluster</module>
-        <module>springcloud-eureka-producer</module>
-        <module>springcloud-eureka-consumer</module>
-        <module>springcloud-eureka-consumer-hystrix</module>
-        <module>springcloud-eureka-consumer-hystrix-dashboard</module>
-        <module>springcloud-hystrix-turbine</module>
-        <module>springcloud-hystrix-turbine-node</module>
-        <module>springcloud-config-server</module>
-        <module>springcloud-config-client</module>
-        <module>springcloud-config-server-bus</module>
-        <module>springcloud-config-client-bus</module>
-        <module>springcloud-zuul</module>
-        <module>springcloud-zipkin-server</module>
-        <module>springcloud-eureka-ribbon</module>
-        <module>springcloud-tcc</module>
+        <module>service-provider</module>
     </modules>
 </project>
